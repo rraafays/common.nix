@@ -9,7 +9,7 @@ Cross-host options, Home Manager bootstrap, and primary-user HM `stateVersion`.
 | `common.email` | Git `user.email`; `user.name` is `common.username` |
 | `common.homeManagerRelease` | Documents HM release (tarball import in `default.nix`) |
 
-Import **`./common` first** among repo modules (before `shell/`, `terminal/`, `user/`, …). It pulls in `"${home-manager}/nixos"`, sets `home-manager.backupFileExtension`, and sets `home-manager.users.<username>.home.stateVersion`.
+Repo: `github.com/rraafays/common.nix`. On the X230T host this is submodule **`src/common`**; import **`./src/common`** before other modules. It pulls in `"${home-manager}/nixos"`, sets `home-manager.backupFileExtension`, and sets `home-manager.users.<username>.home.stateVersion`.
 
 Defaults in `default.nix`. Override on the host:
 
